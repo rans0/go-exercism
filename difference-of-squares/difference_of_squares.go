@@ -1,28 +1,16 @@
 package diffsquares
 
-func SquareOfSum(n int) (sum int) {
-	for i:=1; ; i++ {
-		if i > n {
-			return sum * sum
-		}
-		sum += i
-	}
-	return sum * sum
+// test version 2
+
+func SquareOfSum(n int) int {
+	ret := (n * (n + 1)) / 2
+	return ret * ret
 }
 
-func SumOfSquares(n int) (sum int){
-	for i:=1; ; i++ {
-		if i > n {
-			return sum
-		}
-		sum += i * i
-	}
-	return sum
+func SumOfSquares(n int) int {
+	return (n * (n + 1) * (2*n + 1)) / 6
 }
 
-func Difference(n int) (diff int) {
-	sqOfSum := SquareOfSum(n)
-	sumOfSq := SumOfSquares(n)
-
-	return sqOfSum - sumOfSq
+func Difference(n int) int {
+	return SquareOfSum(n) - SumOfSquares(n)
 }
