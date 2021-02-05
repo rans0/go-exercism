@@ -4,7 +4,7 @@ import (
 	"errors"
 )
 
-const MaxUint64 = (1 << 64) - 1 // << = x × 2y
+const MaxUint64 = (1 << 64) - 1 // << = x × 2^y
 
 func Total () uint64 {
 	return uint64(MaxUint64)
