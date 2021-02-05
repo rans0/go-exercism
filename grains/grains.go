@@ -14,6 +14,5 @@ func Square (input int) (expected uint64, err error) {
 	if 1 > input || input > 64 {
 		return uint64(0), errors.New("invalid")
 	}
-
 	return uint64(1 << uint(input-1)), nil
 }
